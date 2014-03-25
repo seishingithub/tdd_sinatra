@@ -9,8 +9,8 @@ feature "managing items" do
     expect(page).to have_content("Our Menu")
 
     click_link "Add Item"
-    page.fill_in 'Item Name', :with => 'Channa'
-    click_button('Add Item')
-    expect(page).to have_content("Channa")
+    page.fill_in 'Item Name', :with => 'Naan'
+    click_button('Create Item')
+    expect(page).to have_content("Naan")
   end
 end
