@@ -12,5 +12,9 @@ feature "managing items" do
     page.fill_in 'Item Name', :with => 'Naan'
     click_button('Create Item')
     expect(page).to have_content("Naan")
+
+    click_link "Details"
+    expect(page).to have_content("Naan")
+
   end
 end

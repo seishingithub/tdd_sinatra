@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+<body>
+  <h1>Our Menu</h1>
+  <a href="/items/new">Add Item</a>
+  <ul>
+    <% items.each_with_index do |item, index| %>
+      <li><%= item %>
+      <a href="/items/<%= index %>">Details</a></li>
+    <% end %>
+  </ul>
+</body>
+</html>
