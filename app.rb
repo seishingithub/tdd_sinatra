@@ -20,14 +20,28 @@ class App < Sinatra::Base
   get '/items/:id' do
     id = params[:id].to_i
     item = ITEMS[id]
-    erb :items, locals: {:item => item, :id => id}
+    erb :items, :locals => {:item => item, :id => id}
   end
 
-  put '/items/:id/items' do
+  get '/items/:id/edit' do
+    id = params[:id].to_i
+    item = ITEMS[id]
+    erb :edit, :locals => {:item => item, :id => id}
+  end
+
+  post '/items/:id' do
+
+   ITEMS[params[:id].to_i] = params[:item_name]
+
+    redirect '/'
 
   end
-  #get /items/:id/edit
-  #put item/:id
-  #delete /item/:id
 
-end
+  end
+
+
+
+
+#get /items/:id/edit
+#put item/:id
+#delete /item/:id

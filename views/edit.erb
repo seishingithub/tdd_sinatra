@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+<body>
+<h1>Edit <%= item %> </h1>
+<form action="/items/<%= id %>" method="post">
+  <label for="item_name">Item Name</label>
+  <input type="hidden" name= "_method" value ="put" />
+  <input type="text" name="item_name" id="item_name" />
+  <input type="submit" value="Edit Item" />
+</form>
+
+</body>
+</html>

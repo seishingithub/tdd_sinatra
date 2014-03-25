@@ -5,11 +5,8 @@
 </head>
 <body>
 <h1><%= item %></h1>
-<form action="/items" method="post">
-  <label for="item_name">Item Name</label>
-  <input type="text" name="item_name" id="item_name"  />
-  <input type="submit" value="Edit Item" />
-</form>
+
+<a href="/items/<%= id %>/edit">edit</a>
 
 </body>
 </html>

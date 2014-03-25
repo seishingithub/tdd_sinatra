@@ -16,5 +16,8 @@ feature "managing items" do
     click_link "Details"
     expect(page).to have_content("Naan")
 
+    click_link "edit"
+
+
   end
 end
