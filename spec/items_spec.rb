@@ -21,6 +21,11 @@ feature "managing items" do
     click_on('Edit Item')
     expect(page).to have_content("Channa Masala")
 
+    click_link "Details"
+    click_on("Delete Item")
+    expect(page).to_not have_content("Channa Masala")
+
+
 
   end
 end

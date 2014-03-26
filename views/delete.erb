@@ -4,12 +4,12 @@
 
 </head>
 <body>
-<h1><%= item %></h1>
+<h1>Delete <%= item %> </h1>
 
-<a href="/items/<%= id %>/edit">edit</a>
 <form action="/items/<%= id %>" method="post">
   <label for="item_name">Item Name</label>
   <input type="hidden" name="_method" value="put"/>
+  <input type="text" name="item_name" id="item_name"/>
   <input type="submit" value="Delete Item"/>
 </form>
 
