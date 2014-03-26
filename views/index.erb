@@ -8,8 +8,8 @@
 <a href="/items/new">Add Item</a>
 <ul>
   <% items.each_with_index do |item, index| %>
-    <li><%= item %>
-      <a href="/items/<%= index %>">Details</a></li>
+    <ul><%= item %>
+      <a href="/items/<%= index %>">Details</a></ul>
   <% end %>
 </ul>
 </body>

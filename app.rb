@@ -36,7 +36,8 @@ class App < Sinatra::Application
   end
 
   delete '/item/:id' do
-
+    @id = params[:id].to_i
+    ITEMS.delete_at(@id)
     redirect '/'
   end
 end
