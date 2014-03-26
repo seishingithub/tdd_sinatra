@@ -1,6 +1,7 @@
+require 'sinatra'
 require 'sinatra/base'
 
-class App < Sinatra::Base
+class App < Sinatra::Application
 
   ITEMS = []
 
@@ -29,19 +30,13 @@ class App < Sinatra::Base
     erb :edit, :locals => {:item => item, :id => id}
   end
 
-  post '/items/:id' do
+  put '/items/:id' do
+    ITEMS[params[:id].to_i] = params[:item_name]
+    redirect '/'
+  end
 
-   ITEMS[params[:id].to_i] = params[:item_name]
+  delete '/item/:id' do
 
     redirect '/'
-
   end
-
-  end
-
-
-
-
-#get /items/:id/edit
-#put item/:id
-#delete /item/:id
+end

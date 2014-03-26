@@ -17,6 +17,9 @@ feature "managing items" do
     expect(page).to have_content("Naan")
 
     click_link "edit"
+    fill_in 'Item Name', :with => 'Channa Masala'
+    click_on('Edit Item')
+    expect(page).to have_content("Channa Masala")
 
 
   end
